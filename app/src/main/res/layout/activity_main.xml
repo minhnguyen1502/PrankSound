@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFAF5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_nav"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:clickable="false"
+            android:contentDescription="back"
+            android:focusable="false"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bg_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-5dp"
+            android:layout_marginBottom="-8dp"
+            android:fontFamily="@font/badabb"
+            android:gravity="center"
+            android:text="@string/prank_sound"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:includeFontPadding="false"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:visibility="invisible"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toStartOf="@id/favorite"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+        <funnysoundapp.fartpranksound.creepysound.hairclippersound.friendsprankapp.base.StrokeTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/badabb"
+            android:gravity="center"
+            android:text="@string/prank_sound"
+            android:visibility="invisible"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:includeFontPadding="false"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="#FFD200"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toStartOf="@id/favorite"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+        
+        <ImageView
+            android:id="@+id/iv_frank_sound"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            app:layout_constraintEnd_toEndOf="@id/favorite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/img_frank_sound"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:src="@drawable/ic_favorite_false"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctl_nav" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        android:background="@drawable/bg_shadow"
+        android:layout_marginTop="-2sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"/>
+    <LinearLayout
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_nav"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_sound"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_sound"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_sound_s"
+                app:layout_constraintBottom_toTopOf="@id/txt_sound"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/txt_sound"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="16.5dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/sound"
+                android:fontFamily="@font/viga"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_sound" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_trending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_trending"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_trending_ns"
+                app:layout_constraintBottom_toTopOf="@id/txt_trending"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/txt_trending"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="16.5dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/trending"
+                android:fontFamily="@font/viga"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_trending" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_Favorite"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_favorite_ns"
+
+                app:layout_constraintBottom_toTopOf="@id/txt_Favorite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/txt_Favorite"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="16.5dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/favorite"
+                android:textColor="@color/black"
+                android:fontFamily="@font/viga"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_Favorite" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_setting"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_setting_ns"
+                app:layout_constraintBottom_toTopOf="@id/txt_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/txt_setting"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="16.5dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/settings"
+                android:textColor="@color/black"
+                android:fontFamily="@font/viga"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_setting" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

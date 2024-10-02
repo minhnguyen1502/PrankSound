@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "246298082574",
+    "project_id": "asy095--prank-sound",
+    "storage_bucket": "asy095--prank-sound.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246298082574:android:bc500a7a01d0197182ab5f",
+        "android_client_info": {
+          "package_name": "funnysoundapp.fartpranksound.creepysound.hairclippersound.friendsprankapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyH5C4z2hkh5u91y5GA433IGXxIJRcImY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
